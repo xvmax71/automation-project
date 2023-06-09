@@ -1,4 +1,40 @@
-     	Backup & compression automation 
+Bash Script - Audio Conversion and File Transfer Automation
+
+Prerequisites:
+- FFmpeg: Install FFmpeg on your system before running the script.
+
+Usage:
+
+1. Clone the repository:
+   git clone https://github.com/your-username/your-repository.git
+
+2. Move into the project directory:
+   cd your-repository
+
+3. Update the script:
+   - Open the 'audio_conversion_automation.sh' file in a text editor.
+   - Provide appropriate values for the variables 'FROM', 'TO', 'SMTP', 'USERNAME', 'PASSWORD' for email notification setup.
+   - Update the 'ATTACHMENT' variable with the correct path to the files to be attached in the email.
+
+4. Make the script executable:
+   chmod +x audio_conversion_automation.sh
+
+5. Run the script:
+   ./audio_conversion_automation.sh
+
+   The script will perform the following actions:
+   - Check the operating system and install FFmpeg if not already installed.
+   - Convert AAC files to MP3 format and create tar.gz archives.
+   - Organize the files into directories based on their names.
+   - Transfer the files to an AWS S3 bucket.
+   - Send an email notification with the attached files.
+
+6. Monitor the script execution for any errors or messages.
+
+Notes:
+- Ensure that you have the necessary permissions and credentials set up.
+
+Backup & compression automation 
 So basically this is made for those people who want to save there time & energy
 this script automates the conversion of audio files from .aac to .mp3, the creation of compressed .tgz files and the organization of these files into specific directories.
 It also notify you by sending a mail upon the completion of the task
